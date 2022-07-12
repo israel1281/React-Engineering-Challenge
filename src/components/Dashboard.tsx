@@ -5,6 +5,7 @@ import { DepositIcon } from "./icons/DepositIcon";
 import { WithdrawalIcon } from "./icons/WithdrawalIcon";
 
 import classes from "./Dashboard.module.css";
+import React from "react";
 
 interface Props {
   className?: string;
@@ -23,6 +24,7 @@ interface Props {
   };
 }
 export const Dashboard: FC<Props> = memo(function IPhone11ProX1(props = {}) {
+  const [transactions, setTransactions] = React.useState<any>([])
   return (
     <div className={`${classes.root} ${props.className || ""}`}>
       <div className={`${classes.inputBox} ${props.classes?.inputBox || ""}`}>
