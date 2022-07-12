@@ -7,6 +7,9 @@ body,
   display: flex;
   flex-basis: 100%;
   width: 100%;
+  font-family: Quicksand, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  white-space: nowrap;
 }
 
 #root {
@@ -36,7 +39,8 @@ body label {
   cursor: pointer;
 }
 
-body span, body a {
+body span,
+body a {
   display: inline;
 }
 

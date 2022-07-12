@@ -12,6 +12,8 @@ interface Props {
     inputBox: string;
     searchicon: string;
     input: string;
+    filters: string;
+    filtersContainer: string;
   };
 }
 export const Dashboard: FC<Props> = memo(function IPhone11ProX1(props = {}) {
@@ -25,6 +27,18 @@ export const Dashboard: FC<Props> = memo(function IPhone11ProX1(props = {}) {
           className={`${classes.input} ${props.classes?.input || ""}`}
           placeholder="Search for transactions"
         />
+      </div>
+      <div className={`${classes.filters} ${props.classes?.filters || ""}`}>
+        Filters
+      </div>
+      <div
+        className={`${classes.filtersContainer} ${
+          props.classes?.filtersContainer || ""
+        }`}
+      >
+        <button>Withdrawal</button>
+        <button>Deposit</button>
+        <button>Loan</button>
       </div>
     </div>
   );
