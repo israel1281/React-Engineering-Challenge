@@ -1,5 +1,6 @@
 import { FC, memo } from "react";
 import { SearchIcon } from "./components/icons/SearchIcon";
+import { WithdrawalIcon } from "./components/icons/WithdrawalIcon";
 
 import classes from "./App.module.css";
 
@@ -9,7 +10,7 @@ interface Props {
 export const App: FC<Props> = memo(function App(props = {}) {
   return (
     <div className={`${classes.root} ${props.className || ""}`}>
-      <SearchIcon />
+      <WithdrawalIcon />
     </div>
   );
 });
