@@ -23,8 +23,8 @@ interface Props {
     details1: string;
   };
 }
-export const Dashboard: FC<Props> = memo(function IPhone11ProX1(props = {}) {
-  const [transactions, setTransactions] = React.useState<any>([])
+export const Dashboard: FC<Props> = memo(function Dashboard(props = {}) {
+  const [transactions, setTransactions] = React.useState<any>([]);
   return (
     <div className={`${classes.root} ${props.className || ""}`}>
       <div className={`${classes.inputBox} ${props.classes?.inputBox || ""}`}>
