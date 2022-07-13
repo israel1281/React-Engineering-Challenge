@@ -3,6 +3,7 @@ import { FC, memo } from "react";
 import { SearchIcon } from "./icons/SearchIcon";
 import { DepositIcon } from "./icons/DepositIcon";
 import { WithdrawalIcon } from "./icons/WithdrawalIcon";
+import { getData } from "../Utils/FetchData";
 
 import classes from "./Dashboard.module.css";
 import React from "react";
@@ -25,6 +26,17 @@ interface Props {
 }
 export const Dashboard: FC<Props> = memo(function Dashboard(props = {}) {
   const [transactions, setTransactions] = React.useState<any>([]);
+
+  React.useEffect(() => {
+    getData()
+      .then((res) => {
+        setTransactions(res.data.data.transactions);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
   return (
     <div className={`${classes.root} ${props.className || ""}`}>
       <div className={`${classes.inputBox} ${props.classes?.inputBox || ""}`}>
